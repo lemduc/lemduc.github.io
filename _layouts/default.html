@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+{% include head.html %}
+<body>
+    <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
+    <i id="top"></i>
+    {% include nav.html %}
+    {% include header.html %}
+    <div class="container">
+        {{ content }}
+    </div>
+    {% include footer.html %}
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script>
+        function toggleBibTeX(btn) {
+            $(btn).closest(".col-pub").find('.pub-bibtex').toggleClass("hidden");
+            $(btn).toggleClass("btn-default");
+            $(btn).toggleClass("btn-primary");
+            $('[data-spy="scroll"]').each(function () {
+                var $spy = $(this).scrollspy('refresh')
+            });
+        }
+        function stripeRows() {
+            $.each($(".row"), function(index, element) {
+                if ($(element).children(".col-pub").length > 0) {
+                    if (index % 2 == 0) {
+                        $(element).addClass("even");
+                    } else {
+                        $(element).addClass("odd");
+                    }
+                }
+            });
+        }
+        function adjustCols() {
+            $.each($(".row"), function(index, element) {
+                $(element).find(".col-pub-header").addClass('col-xs-10').addClass('col-xs-offset-0');
+                $(element).find(".col-pub").addClass('col-xs-10').addClass('col-xs-offset-0');
+            });
+        }
+        function insertButtons() {
+            $('.pub-html').after('<button type="button" class="btn btn-default btn-sm" onclick="toggleBibTeX(this); return false;">BibTeX</button>');
+        }
+        function setupPubs() {
+            stripeRows();
+            adjustCols();
+            insertButtons();
+        }
+        $(document).ready(function() {
+            setupPubs();
+        });
+    </script>
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', '{{ site.analytics.google.tracking_id }}', 'auto');
+        ga('send', 'pageview');
+    </script>
+</body>
+</html>
+

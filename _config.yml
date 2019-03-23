@@ -1,0 +1,27 @@
+# Site settings
+title: Duc Minh Le, PhD
+author:
+  name: Duc Minh Le
+  email: dle50@bloomberg.net
+  github:  lemduc
+  twitter: lemduc
+description: Duc Minh Le lemduc ducmle lemduc2002
+keywords: Duc Minh Le lemduc ducmle lemduc2002
+baseurl: ""
+url: "http://lemduc.github.io"
+analytics:
+  google:
+    tracking_id: 'UA-136797269-1'
+
+# Build settings
+timezone: America/New_York
+encoding: utf-8
+markdown: kramdown
+permalink: pretty
+plugins:
+  - jekyll-sitemap
+exclude:
+  - .gitignore
+  - Gemfile
+  - Gemfile.lock
+  - README.md
