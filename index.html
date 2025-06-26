@@ -1,10 +1,40 @@
 ---
 layout: default
 ---
+<h2 onclick="toggleSection('latest-updates-section')" style="cursor:pointer;">Latest Updates</h2>
+<hr/>
+<div id="latest-updates-section">
+{% include latest_updates.html %}
+</div>
+
+<h2 onclick="toggleSection('education-section')" style="cursor:pointer;">Education</h2>
+<hr/>
+<div id="education-section">
+{% include education.html %}
+</div>
+
+<h2 onclick="toggleSection('experience-section')" style="cursor:pointer;">Work Experience</h2>
+<hr/>
+<div id="experience-section">
+{% include experience.html %}
+</div>
+
+<h2 onclick="toggleSection('presentation-section')" style="cursor:pointer;">Presentations</h2>
+<hr/>
+<div id="presentation-section">
+{% include presentation.html %}
+</div>
+
 <h2 onclick="toggleSection('awards-section')" style="cursor:pointer;">Awards</h2>
 <hr/>
 <div id="awards-section">
 {% include awards.html %}
+</div>
+
+<h2 onclick="toggleSection('services-section')" style="cursor:pointer;">Services</h2>
+<hr/>
+<div id="services-section">
+{% include services.html %}
 </div>
 
 <h2 onclick="toggleSection('patents-section')" style="cursor:pointer;">Patents</h2>
