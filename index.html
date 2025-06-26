@@ -1,6 +1,31 @@
 ---
 layout: default
 ---
-<h2>Selected Publications</h2>
+<h2 onclick="toggleSection('awards-section')" style="cursor:pointer;">Awards</h2>
 <hr/>
+<div id="awards-section">
+{% include awards.html %}
+</div>
+
+<h2 onclick="toggleSection('patents-section')" style="cursor:pointer;">Patents</h2>
+<hr/>
+<div id="patents-section">
+{% include patents.html %}
+</div>
+
+<h2 onclick="toggleSection('publications-section')" style="cursor:pointer;">Selected Publications</h2>
+<hr/>
+<div id="publications-section">
 {% include publications.html %}
+</div>
+
+<script>
+function toggleSection(id) {
+  var section = document.getElementById(id);
+  if (section.style.display === 'none') {
+    section.style.display = '';
+  } else {
+    section.style.display = 'none';
+  }
+}
+</script>
