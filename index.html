@@ -1,49 +1,112 @@
 ---
 layout: default
 ---
-<h2 onclick="toggleSection('latest-updates-section')" style="cursor:pointer;">Latest Updates</h2>
+<style>
+.floating-nav {
+  position: fixed;
+  top: 100px;
+  right: 30px;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  padding: 16px 20px;
+  z-index: 1000;
+  min-width: 180px;
+}
+.floating-nav strong {
+  display: block;
+  font-size: 1.3em;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+.floating-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.floating-nav li {
+  margin-bottom: 10px;
+}
+.floating-nav a {
+  color: #337ab7;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+.floating-nav a:hover {
+  color: #23527c;
+  text-decoration: underline;
+}
+@media (max-width: 900px) {
+  .floating-nav { display: none; }
+}
+</style>
+
+<div class="floating-nav">
+  <strong>Navigate</strong>
+  <ul>
+    <li><a href="#latest-updates-section">Latest Updates</a></li>
+    <li><a href="#education-section">Education</a></li>
+    <li><a href="#experience-section">Work Experience</a></li>
+    <li><a href="#research-section">Research Experience</a></li>
+    <li><a href="#presentation-section">Presentations</a></li>
+    <li><a href="#awards-section">Awards</a></li>
+    <li><a href="#services-section">Services</a></li>
+    <li><a href="#patents-section">Patents</a></li>
+    <li><a href="#publications-section">Publications</a></li>
+  </ul>
+</div>
+
+<h2 id="latest-updates-section" onclick="toggleSection('latest-updates-section')" style="cursor:pointer;">Latest Updates</h2>
 <hr/>
 <div id="latest-updates-section">
 {% include latest_updates.html %}
 </div>
 
-<h2 onclick="toggleSection('education-section')" style="cursor:pointer;">Education</h2>
+<h2 id="education-section" onclick="toggleSection('education-section')" style="cursor:pointer;">Education</h2>
 <hr/>
 <div id="education-section">
 {% include education.html %}
 </div>
 
-<h2 onclick="toggleSection('experience-section')" style="cursor:pointer;">Work Experience</h2>
+<h2 id="experience-section" onclick="toggleSection('experience-section')" style="cursor:pointer;">Work Experience</h2>
 <hr/>
 <div id="experience-section">
 {% include experience.html %}
 </div>
 
-<h2 onclick="toggleSection('presentation-section')" style="cursor:pointer;">Presentations</h2>
+<h2 id="research-section" onclick="toggleSection('research-section')" style="cursor:pointer;">Research Experience</h2>
+<hr/>
+<div id="research-section">
+{% include research.html %}
+</div>
+
+<h2 id="presentation-section" onclick="toggleSection('presentation-section')" style="cursor:pointer;">Presentations</h2>
 <hr/>
 <div id="presentation-section">
 {% include presentation.html %}
 </div>
 
-<h2 onclick="toggleSection('awards-section')" style="cursor:pointer;">Awards</h2>
+<h2 id="awards-section" onclick="toggleSection('awards-section')" style="cursor:pointer;">Awards</h2>
 <hr/>
 <div id="awards-section">
 {% include awards.html %}
 </div>
 
-<h2 onclick="toggleSection('services-section')" style="cursor:pointer;">Services</h2>
+<h2 id="services-section" onclick="toggleSection('services-section')" style="cursor:pointer;">Services</h2>
 <hr/>
 <div id="services-section">
 {% include services.html %}
 </div>
 
-<h2 onclick="toggleSection('patents-section')" style="cursor:pointer;">Patents</h2>
+<h2 id="patents-section" onclick="toggleSection('patents-section')" style="cursor:pointer;">Patents</h2>
 <hr/>
 <div id="patents-section">
 {% include patents.html %}
 </div>
 
-<h2 onclick="toggleSection('publications-section')" style="cursor:pointer;">Selected Publications</h2>
+<h2 id="publications-section" onclick="toggleSection('publications-section')" style="cursor:pointer;">Selected Publications</h2>
 <hr/>
 <div id="publications-section">
 {% include publications.html %}
