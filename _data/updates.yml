@@ -1,0 +1,30 @@
+- title: "New Publication Accepted"
+  content: "Our paper 'Architectural Decay as Predictor of Issue-and Change-Proneness' has been accepted at IEEE International Conference on Software Architecture (ICSA 2021)."
+  date: 2021-01-15
+  type: "publication"
+  link: "https://arxiv.org/pdf/2102.09835"
+
+- title: "Research Collaboration"
+  content: "Started new research collaboration with USC Software Architecture Research Group on architectural decay in software systems."
+  date: 2020-09-01
+  type: "research"
+  link: ""
+
+- title: "Industry Experience"
+  content: "Joined Bloomberg LP as Software Engineer in System Security team, focusing on identity and access control systems."
+  date: 2023-06-01
+  type: "career"
+  link: "https://www.bloomberg.com"
+
+- title: "PhD Defense"
+  content: "Successfully defended PhD thesis 'Architectural Decay in Software Systems' at University of Southern California."
+  date: 2021-05-15
+  type: "academic"
+  link: ""
+
+- title: "Conference Presentation"
+  content: "Presented research on architectural decay at IEEE International Conference on Software Architecture (ICSA 2018)."
+  date: 2018-04-10
+  type: "presentation"
+  link: "http://shahbazian.me/papers/icsa2018duc.pdf"
+

@@ -1,0 +1,54 @@
+- title: "Architectural Archipelagos: Technical Debt in Long-Lived Software Research Platforms"
+  authors: "Marcelo S. Laser, Duc Minh Le, Joshua Garcia, Nenad Medvidovic"
+  venue: "IEEE/ACM International Conference on Technical Debt (TechDebt 2021)"
+  date: 2021-04-01
+  type: "conference"
+  pdf: "https://arxiv.org/pdf/2104.08432"
+  bibtex: |
+    @INPROCEEDINGS{9462988,
+      author={Laser, Marcelo Schmitt and Minh Le, Duc and Garcia, Joshua and Medvidović, Nenad},
+      booktitle={2021 IEEE/ACM International Conference on Technical Debt (TechDebt)},
+      title={Architectural Archipelagos: Technical Debt in Long-Lived Software Research Platforms},
+      year={2021},
+      volume={},
+      number={},
+      pages={94-98},
+      doi={10.1109/TechDebt52882.2021.00019}
+    }
+
+- title: "Architectural Decay as Predictor of Issue-and Change-Proneness"
+  authors: "Duc Minh Le, Surid Karthik, Marcelo S. Laser, Nenad Medvidovic"
+  venue: "IEEE International Conference on Software Architecture (ICSA 2021)"
+  date: 2021-02-01
+  type: "conference"
+  pdf: "https://arxiv.org/pdf/2102.09835"
+  bibtex: |
+    @INPROCEEDINGS{9426752,
+      author={Le, Duc Minh and Karthik, Suhrid and Laser, Marcelo Schmitt and Medvidovic, Nenad},
+      booktitle={2021 IEEE 18th International Conference on Software Architecture (ICSA)},
+      title={Architectural Decay as Predictor of Issue- and Change-Proneness},
+      year={2021},
+      volume={},
+      number={},
+      pages={92-103},
+      doi={10.1109/ICSA51549.2021.00017}
+    }
+
+- title: "An Empirical Study of Architectural Decay in Open-Source Software Systems"
+  authors: "Duc Le, D Link, A Shavazian, N Medvidovic"
+  venue: "IEEE International Conference on Software Architecture (ICSA 2018)"
+  date: 2018-04-01
+  type: "conference"
+  pdf: "http://shahbazian.me/papers/icsa2018duc.pdf"
+  bibtex: |
+    @INPROCEEDINGS{8417151,
+      author={D. M. {Le} and D. {Link} and A. {Shahbazian} and N. {Medvidovic}},
+      booktitle={2018 IEEE International Conference on Software Architecture (ICSA)},
+      title={An Empirical Study of Architectural Decay in Open-Source Software},
+      year={2018},
+      volume={},
+      number={},
+      pages={176-17609},
+      doi={10.1109/ICSA.2018.00027}
+    }
+

@@ -5,10 +5,14 @@ author:
   email: duclm.bk@gmail.com
   github:  lemduc
   twitter: lemduc
-description: Duc Minh Le lemduc ducmle lemduc2002
-keywords: Duc Minh Le lemduc ducmle lemduc2002
+description: "Software Engineer and Computer Science PhD specializing in software architecture, system security, and software engineering research. Currently at Bloomberg LP."
+keywords: "Duc Minh Le, software engineering, software architecture, system security, research, PhD, Bloomberg, USC"
 baseurl: ""
-url: "http://lemduc.github.io"
+url: "https://lemduc.github.io"
+
+# RSS Feed settings
+feed:
+  path: feed.xml
 analytics:
   google:
     tracking_id: 'UA-136797269-1'

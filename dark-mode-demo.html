@@ -1,0 +1,136 @@
+---
+layout: default
+title: "Dark Mode Demo"
+---
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2">
+      <h1>🌙 Dark Mode Feature Demo</h1>
+      
+      <div class="alert alert-info">
+        <h4>How to Use Dark Mode:</h4>
+        <ul>
+          <li><strong>Click the toggle button</strong> in the top-right corner (🌙/☀️)</li>
+          <li><strong>Keyboard shortcut:</strong> Press <kbd>Ctrl+Shift+D</kbd> (or <kbd>Cmd+Shift+D</kbd> on Mac)</li>
+          <li><strong>Auto-detection:</strong> Follows your system preference on first visit</li>
+          <li><strong>Persistence:</strong> Your choice is saved and remembered</li>
+        </ul>
+      </div>
+
+      <h2>Features</h2>
+      <div class="row">
+        <div class="col-md-6">
+          <h3>✅ What's Included</h3>
+          <ul>
+            <li>Complete dark theme for all site elements</li>
+            <li>Smooth transitions between themes</li>
+            <li>System preference detection</li>
+            <li>Keyboard shortcuts</li>
+            <li>Mobile-responsive toggle button</li>
+            <li>Print-friendly (always light mode for printing)</li>
+            <li>Accessibility improvements</li>
+          </ul>
+        </div>
+        <div class="col-md-6">
+          <h3>🎨 Theme Elements</h3>
+          <ul>
+            <li>Navigation bar and header</li>
+            <li>Floating navigation menu</li>
+            <li>All text and typography</li>
+            <li>Social media buttons</li>
+            <li>Publication sections</li>
+            <li>Code blocks and pre elements</li>
+            <li>Form elements</li>
+            <li>Scrollbars</li>
+          </ul>
+        </div>
+      </div>
+
+      <h2>Sample Content</h2>
+      
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">Publication Example</h3>
+        </div>
+        <div class="panel-body">
+          <h4>Architectural Decay in Software Systems</h4>
+          <p><strong>Authors:</strong> Duc Minh Le, Nenad Medvidovic</p>
+          <p><strong>Venue:</strong> IEEE International Conference on Software Architecture (ICSA 2021)</p>
+          <p>This paper presents a comprehensive study of architectural decay in long-lived software systems...</p>
+          <a href="#" class="btn btn-primary">Read More</a>
+          <a href="#" class="btn btn-link">Download PDF</a>
+        </div>
+      </div>
+
+      <h3>Code Example</h3>
+      <pre><code>function toggleTheme() {
+  const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+  applyTheme(newTheme);
+}
+
+// CSS Custom Properties
+:root {
+  --bg-primary: #ffffff;
+  --text-primary: #333333;
+}
+
+[data-theme="dark"] {
+  --bg-primary: #1a1a1a;
+  --text-primary: #e0e0e0;
+}</code></pre>
+
+      <h3>Form Example</h3>
+      <form>
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" class="form-control" id="email" placeholder="Enter email">
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea class="form-control" id="message" rows="3" placeholder="Your message"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+
+      <div class="alert alert-success">
+        <h4>🎉 Dark Mode is Now Active!</h4>
+        <p>The dark mode feature is fully implemented and ready to use. Try switching between themes to see the smooth transitions and consistent styling across all elements.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+// Add some interactive demo functionality
+document.addEventListener('DOMContentLoaded', function() {
+  // Show current theme status
+  const themeStatus = document.createElement('div');
+  themeStatus.className = 'alert alert-warning';
+  themeStatus.innerHTML = '<strong>Current Theme:</strong> <span id="current-theme">Loading...</span>';
+  document.querySelector('.container .row .col-md-8').insertBefore(themeStatus, document.querySelector('h1').nextSibling);
+  
+  // Update theme status
+  function updateThemeStatus() {
+    const currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
+    document.getElementById('current-theme').textContent = currentTheme.charAt(0).toUpperCase() + currentTheme.slice(1) + ' Mode';
+  }
+  
+  // Listen for theme changes
+  const observer = new MutationObserver(function(mutations) {
+    mutations.forEach(function(mutation) {
+      if (mutation.type === 'attributes' && mutation.attributeName === 'data-theme') {
+        updateThemeStatus();
+      }
+    });
+  });
+  
+  observer.observe(document.documentElement, {
+    attributes: true,
+    attributeFilter: ['data-theme']
+  });
+  
+  updateThemeStatus();
+});
+</script>
+

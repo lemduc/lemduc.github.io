@@ -1,0 +1,60 @@
+---
+layout: null
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>{{ site.title }}</title>
+    <description>{{ site.description }}</description>
+    <link>{{ site.url }}{{ site.baseurl }}</link>
+    <atom:link href="{{ site.url }}{{ site.baseurl }}/feed.xml" rel="self" type="application/rss+xml"/>
+    <language>en-us</language>
+    <managingEditor>{{ site.author.email }} ({{ site.author.name }})</managingEditor>
+    <webMaster>{{ site.author.email }} ({{ site.author.name }})</webMaster>
+    <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
+    <generator>Jekyll v{{ jekyll.version }}</generator>
+    
+    {% assign all_posts = site.posts | concat: site.pages | where_exp: "item", "item.layout == 'post'" | sort: 'date' | reverse %}
+    {% for post in all_posts limit:20 %}
+    <item>
+      <title>{{ post.title | xml_escape }}</title>
+      <description>{{ post.excerpt | strip_html | strip_newlines | truncate: 160 | xml_escape }}</description>
+      <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
+      <link>{{ site.url }}{{ site.baseurl }}{{ post.url }}</link>
+      <guid isPermaLink="true">{{ site.url }}{{ site.baseurl }}{{ post.url }}</guid>
+      {% if post.categories %}
+      {% for category in post.categories %}
+      <category>{{ category | xml_escape }}</category>
+      {% endfor %}
+      {% endif %}
+    </item>
+    {% endfor %}
+    
+    {% comment %} Add latest updates from latest_updates.html {% endcomment %}
+    {% assign latest_updates = site.data.updates | default: site.updates | sort: 'date' | reverse %}
+    {% for update in latest_updates limit:10 %}
+    <item>
+      <title>Update: {{ update.title | default: update.content | strip_html | truncate: 60 | xml_escape }}</title>
+      <description>{{ update.content | strip_html | xml_escape }}</description>
+      <pubDate>{{ update.date | date_to_rfc822 }}</pubDate>
+      <link>{{ site.url }}{{ site.baseurl }}/#latest-updates-section</link>
+      <guid isPermaLink="true">{{ site.url }}{{ site.baseurl }}/#latest-updates-{{ forloop.index }}</guid>
+      <category>Updates</category>
+    </item>
+    {% endfor %}
+    
+    {% comment %} Add recent publications {% endcomment %}
+    {% assign recent_pubs = site.data.publications | default: site.publications | sort: 'date' | reverse %}
+    {% for pub in recent_pubs limit:5 %}
+    <item>
+      <title>New Publication: {{ pub.title | xml_escape }}</title>
+      <description>{{ pub.venue | xml_escape }} - {{ pub.authors | xml_escape }}</description>
+      <pubDate>{{ pub.date | date_to_rfc822 }}</pubDate>
+      <link>{{ site.url }}{{ site.baseurl }}/#publications-section</link>
+      <guid isPermaLink="true">{{ site.url }}{{ site.baseurl }}/#publication-{{ forloop.index }}</guid>
+      <category>Publications</category>
+    </item>
+    {% endfor %}
+  </channel>
+</rss>
+
