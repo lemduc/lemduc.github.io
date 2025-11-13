@@ -5,9 +5,8 @@ This document explains the RSS feed implementation for your Jekyll academic webs
 ## 📡 RSS Feed Features
 
 ### What's Included in the Feed:
-- **Blog Posts**: All posts from the `_posts/` directory
-- **Updates**: Recent updates from `_data/updates.yml`
-- **Publications**: Latest publications from `_data/publications.yml`
+- **Updates**: Recent updates from `_data/updates.yml` (up to 15 most recent)
+- **Publications**: Latest publications from `_data/publications.yml` (up to 10 most recent)
 
 ### Feed URL:
 ```
@@ -22,7 +21,6 @@ https://lemduc.github.io/feed.xml
 - Includes proper metadata and categorization
 
 ### 2. Data Sources
-- **Blog Posts**: Jekyll automatically includes all posts from `_posts/`
 - **Updates**: Structured data in `_data/updates.yml`
 - **Publications**: Structured data in `_data/publications.yml`
 
@@ -32,6 +30,19 @@ https://lemduc.github.io/feed.xml
 - **Language**: en-us
 - **Managing Editor**: Your email and name
 - **Last Build Date**: Automatically updated
+- **Copyright**: Automatically updated with current year
+- **Dublin Core Support**: Enhanced metadata using DC namespace
+
+### 4. Feed Item Features
+- **Rich Descriptions**:
+  - Updates include full content with "Read more" links
+  - Publications include authors, venue, type, and PDF download links
+- **Smart Linking**:
+  - Updates link to external URL if provided, otherwise to site section
+  - Publications link directly to PDF if available
+- **Unique GUIDs**: Stable identifiers based on date and title slugs
+- **Multiple Categories**: Items can have multiple category tags
+- **Creator Attribution**: Proper `dc:creator` tags for authorship
 
 ## 📝 Managing Updates
 
@@ -72,20 +83,6 @@ add_publication(
     date="2024-01-01",
     pdf_link="https://example.com/paper.pdf"
 )
-```
-
-### Adding Blog Posts
-Create new posts in `_posts/` directory:
-
-```markdown
----
-layout: post
-title: "Your Post Title"
-date: 2024-01-15 10:00:00 -0500
-categories: [blog, research]
----
-
-Your post content here...
 ```
 
 ## 🔧 Configuration
@@ -159,7 +156,7 @@ Popular services:
 
 1. **Feed not updating**: Check Jekyll build process
 2. **Invalid XML**: Validate feed with W3C validator
-3. **Missing posts**: Ensure posts have proper front matter
+3. **Missing items**: Ensure updates and publications in `_data/` files have proper formatting
 4. **Date formatting**: Use ISO date format (YYYY-MM-DD)
 
 ### Debug Steps:
@@ -173,7 +170,7 @@ Popular services:
 Consider adding:
 - **Podcast feeds** for audio content
 - **Video feeds** for presentations
-- **Category-specific feeds** (publications only, blog only)
+- **Category-specific feeds** (publications only, updates only)
 - **Atom feed** format as alternative
 - **Feed icons** and branding
 
