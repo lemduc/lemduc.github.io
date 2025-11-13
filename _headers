@@ -1,0 +1,11 @@
+# Security headers for the site
+# Note: GitHub Pages has limited support for custom headers
+# These headers work best when using Netlify or similar hosting
+# For GitHub Pages, consider using a service worker or meta tags as alternatives
+
+/*
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
+  X-XSS-Protection: 1; mode=block
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: interest-cohort=()
