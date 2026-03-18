@@ -1,15 +1,24 @@
-<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+<nav class="navbar navbar-expand-md navbar-site fixed-top" role="navigation">
     <div class="container">
-        <div class="navbar-header">
-            <div class="navbar-brand">
-                <span class="navbar-brand-name">{{site.title}}</span>
-                <div class="navbar-brand-info">
-                    <span class="navbar-brand-title">Software Engineer</span>
-                    <span class="navbar-brand-at">@</span>
-                    <img class="navbar-brand-abb" src="/images/bloomberg.png" height="15px"/>
-                </div>
+        <a class="navbar-brand" href="#">
+            <span class="navbar-brand-name">{{site.title}}</span>
+            <div class="navbar-brand-info">
+                <span class="navbar-brand-title">Software Engineer</span>
+                <span class="navbar-brand-at">@</span>
+                <img class="navbar-brand-abb" src="/images/bloomberg.png" height="15" alt="Bloomberg" loading="lazy"/>
             </div>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="#latest-updates-section">Updates</a></li>
+                <li class="nav-item"><a class="nav-link" href="#education-section">Education</a></li>
+                <li class="nav-item"><a class="nav-link" href="#experience-section">Experience</a></li>
+                <li class="nav-item"><a class="nav-link" href="#skills-section">Skills</a></li>
+                <li class="nav-item"><a class="nav-link" href="#publications-section">Publications</a></li>
+            </ul>
         </div>
     </div>
 </nav>
-

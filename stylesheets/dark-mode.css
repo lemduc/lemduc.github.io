@@ -14,18 +14,6 @@
   --shadow-medium: rgba(0, 0, 0, 0.15);
   --accent-color: #337ab7;
   --accent-hover: #23527c;
-  --success-color: #28a745;
-  --warning-color: #ffc107;
-  --danger-color: #dc3545;
-  --info-color: #17a2b8;
-  
-  /* Bootstrap overrides for light mode */
-  --bs-body-bg: var(--bg-primary);
-  --bs-body-color: var(--text-primary);
-  --bs-secondary-color: var(--text-secondary);
-  --bs-border-color: var(--border-color);
-  --bs-link-color: var(--accent-color);
-  --bs-link-hover-color: var(--accent-hover);
 }
 
 [data-theme="dark"] {
@@ -42,18 +30,6 @@
   --shadow-medium: rgba(0, 0, 0, 0.4);
   --accent-color: #4a9eff;
   --accent-hover: #6bb6ff;
-  --success-color: #4caf50;
-  --warning-color: #ff9800;
-  --danger-color: #f44336;
-  --info-color: #2196f3;
-  
-  /* Bootstrap overrides for dark mode */
-  --bs-body-bg: var(--bg-primary);
-  --bs-body-color: var(--text-primary);
-  --bs-secondary-color: var(--text-secondary);
-  --bs-border-color: var(--border-color);
-  --bs-link-color: var(--accent-color);
-  --bs-link-hover-color: var(--accent-hover);
 }
 
 /* Global dark mode styles */
@@ -68,25 +44,25 @@
 }
 
 /* Navigation bar dark mode */
-[data-theme="dark"] .navbar-inverse {
+[data-theme="dark"] .navbar-site {
   background-color: var(--bg-primary);
   border-color: var(--border-color);
 }
 
-[data-theme="dark"] .navbar-inverse .navbar-brand-name {
-  color: var(--text-primary);
-}
-
-[data-theme="dark"] .navbar-inverse .navbar-brand-title {
+[data-theme="dark"] .navbar-site .nav-link {
   color: var(--text-secondary);
 }
 
-[data-theme="dark"] .navbar-inverse .navbar-nav > li > a {
-  color: var(--text-secondary);
+[data-theme="dark"] .navbar-site .nav-link:hover {
+  color: var(--text-primary);
 }
 
-[data-theme="dark"] .navbar-inverse .navbar-nav > li > a:hover {
-  color: var(--text-primary);
+[data-theme="dark"] .navbar-toggler {
+  border-color: var(--border-color);
+}
+
+[data-theme="dark"] .navbar-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23e0e0e0' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
 /* Header section dark mode */
@@ -160,23 +136,6 @@
   border-color: var(--border-color);
 }
 
-/* RSS icon alignment fix */
-.btn-rss i {
-  line-height: 34px;
-  vertical-align: middle;
-}
-
-/* Ensure all social icons have consistent alignment */
-.social-icon .btn-social-icon i {
-  line-height: 34px;
-  vertical-align: middle;
-}
-
-.social-icon .btn-social-icon img {
-  vertical-align: middle;
-  margin-top: -2px;
-}
-
 /* Links and text dark mode */
 [data-theme="dark"] a {
   color: var(--accent-color);
@@ -186,11 +145,11 @@
   color: var(--accent-hover);
 }
 
-[data-theme="dark"] h1, 
-[data-theme="dark"] h2, 
-[data-theme="dark"] h3, 
-[data-theme="dark"] h4, 
-[data-theme="dark"] h5, 
+[data-theme="dark"] h1,
+[data-theme="dark"] h2,
+[data-theme="dark"] h3,
+[data-theme="dark"] h4,
+[data-theme="dark"] h5,
 [data-theme="dark"] h6 {
   color: var(--text-primary);
 }
@@ -245,21 +204,34 @@
   color: var(--text-primary);
 }
 
-/* Form elements dark mode */
-[data-theme="dark"] input,
-[data-theme="dark"] textarea,
-[data-theme="dark"] select {
+/* Skills dark mode */
+[data-theme="dark"] .skill-category {
+  background: var(--bg-primary);
+  border-color: var(--border-color);
+}
+
+[data-theme="dark"] .skill-tag {
   background-color: var(--bg-tertiary);
+  color: var(--text-primary);
+  border-color: var(--border-color);
+}
+
+/* Publication filter dark mode */
+[data-theme="dark"] .pub-filter-btn {
+  background: var(--bg-primary);
   border-color: var(--border-color);
   color: var(--text-primary);
 }
 
-[data-theme="dark"] input:focus,
-[data-theme="dark"] textarea:focus,
-[data-theme="dark"] select:focus {
-  background-color: var(--bg-primary);
+[data-theme="dark"] .pub-filter-btn:hover {
   border-color: var(--accent-color);
-  color: var(--text-primary);
+  color: var(--accent-color);
+}
+
+[data-theme="dark"] .pub-filter-btn.active {
+  background-color: var(--accent-color);
+  color: #fff;
+  border-color: var(--accent-color);
 }
 
 /* Scrollbar dark mode */
@@ -285,7 +257,7 @@
   position: fixed;
   top: 20px;
   right: 20px;
-  z-index: 1000;
+  z-index: 1100;
   background: var(--bg-primary);
   border: 1px solid var(--border-color);
   border-radius: 50%;
@@ -323,7 +295,7 @@
     width: 45px;
     height: 45px;
   }
-  
+
   .theme-toggle i {
     font-size: 18px;
   }
@@ -338,7 +310,7 @@
     --text-secondary: #666666;
     --border-color: #e9ecef;
   }
-  
+
   .theme-toggle {
     display: none !important;
   }

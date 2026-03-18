@@ -2,3 +2,19 @@ _site/
 .sass-cache/
 .jekyll-cache/
 .jekyll-metadata
+
+# Ruby
+.ruby-lsp/
+.bundle/
+vendor/
+
+# OS
+.DS_Store
+
+# Editor
+*.swp
+*.swo
+*~
+
+# Claude
+.claude/
