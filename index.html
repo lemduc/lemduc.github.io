@@ -6,8 +6,8 @@ layout: default
   position: fixed;
   top: 100px;
   right: 30px;
-  background: var(--bg-primary, #fff);
-  border: 1px solid var(--border-color, #ccc);
+  background: #fff;
+  border: 1px solid #ccc;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   padding: 16px 20px;
@@ -29,13 +29,13 @@ layout: default
   margin-bottom: 10px;
 }
 .floating-nav a {
-  color: var(--accent-color, #337ab7);
+  color: #337ab7;
   text-decoration: none;
   font-weight: 500;
   transition: color 0.2s;
 }
 .floating-nav a:hover {
-  color: var(--accent-hover, #23527c);
+  color: #23527c;
   text-decoration: underline;
 }
 @media (max-width: 900px) {
@@ -49,8 +49,7 @@ layout: default
     <li><a href="#latest-updates-section">Latest Updates</a></li>
     <li><a href="#education-section">Education</a></li>
     <li><a href="#experience-section">Work Experience</a></li>
-    <li><a href="#skills-section">Skills</a></li>
-    <li><a href="#research-section">Research</a></li>
+    <li><a href="#research-section">Research Experience</a></li>
     <li><a href="#presentation-section">Presentations</a></li>
     <li><a href="#awards-section">Awards</a></li>
     <li><a href="#services-section">Services</a></li>
@@ -58,95 +57,71 @@ layout: default
     <li><a href="#publications-section">Publications</a></li>
   </ul>
   <div class="nav-shortcuts">
-    <small>Press <kbd>Ctrl+Shift+D</kbd> to toggle dark mode</small>
+    <small>💡 Tip: Press <kbd>Ctrl+Shift+D</kbd> to toggle dark mode</small>
   </div>
 </div>
 
-<h2 class="section-header" onclick="toggleSection('latest-updates-section', this)">
-  <i class="fa-solid fa-chevron-down toggle-icon"></i> Latest Updates
-</h2>
+<h2 onclick="toggleSection('latest-updates-section')" style="cursor:pointer;">Latest Updates</h2>
 <hr/>
-<div id="latest-updates-section" class="section-content">
+<div id="latest-updates-section">
 {% include latest_updates.html %}
 </div>
 
-<h2 class="section-header" onclick="toggleSection('education-section', this)">
-  <i class="fa-solid fa-chevron-down toggle-icon"></i> Education
-</h2>
+<h2 onclick="toggleSection('education-section')" style="cursor:pointer;">Education</h2>
 <hr/>
-<div id="education-section" class="section-content">
+<div id="education-section">
 {% include education.html %}
 </div>
 
-<h2 class="section-header" onclick="toggleSection('experience-section', this)">
-  <i class="fa-solid fa-chevron-down toggle-icon"></i> Work Experience
-</h2>
+<h2 onclick="toggleSection('experience-section')" style="cursor:pointer;">Work Experience</h2>
 <hr/>
-<div id="experience-section" class="section-content">
+<div id="experience-section">
 {% include experience.html %}
 </div>
 
-<h2 class="section-header" onclick="toggleSection('skills-section', this)">
-  <i class="fa-solid fa-chevron-down toggle-icon"></i> Skills & Technologies
-</h2>
+<h2 onclick="toggleSection('research-section')" style="cursor:pointer;">Research Experience</h2>
 <hr/>
-<div id="skills-section" class="section-content">
-{% include skills.html %}
-</div>
-
-<h2 class="section-header" onclick="toggleSection('research-section', this)">
-  <i class="fa-solid fa-chevron-down toggle-icon"></i> Research Experience
-</h2>
-<hr/>
-<div id="research-section" class="section-content">
+<div id="research-section">
 {% include research.html %}
 </div>
 
-<h2 class="section-header" onclick="toggleSection('presentation-section', this)">
-  <i class="fa-solid fa-chevron-down toggle-icon"></i> Presentations
-</h2>
+<h2 onclick="toggleSection('presentation-section')" style="cursor:pointer;">Presentations</h2>
 <hr/>
-<div id="presentation-section" class="section-content">
+<div id="presentation-section">
 {% include presentation.html %}
 </div>
 
-<h2 class="section-header" onclick="toggleSection('awards-section', this)">
-  <i class="fa-solid fa-chevron-down toggle-icon"></i> Awards
-</h2>
+<h2 onclick="toggleSection('awards-section')" style="cursor:pointer;">Awards</h2>
 <hr/>
-<div id="awards-section" class="section-content">
+<div id="awards-section">
 {% include awards.html %}
 </div>
 
-<h2 class="section-header" onclick="toggleSection('services-section', this)">
-  <i class="fa-solid fa-chevron-down toggle-icon"></i> Services
-</h2>
+<h2 onclick="toggleSection('services-section')" style="cursor:pointer;">Services</h2>
 <hr/>
-<div id="services-section" class="section-content">
+<div id="services-section">
 {% include services.html %}
 </div>
 
-<h2 class="section-header" onclick="toggleSection('patents-section', this)">
-  <i class="fa-solid fa-chevron-down toggle-icon"></i> Patents
-</h2>
+<h2 onclick="toggleSection('patents-section')" style="cursor:pointer;">Patents</h2>
 <hr/>
-<div id="patents-section" class="section-content">
+<div id="patents-section">
 {% include patents.html %}
 </div>
 
-<h2 class="section-header" onclick="toggleSection('publications-section', this)">
-  <i class="fa-solid fa-chevron-down toggle-icon"></i> Selected Publications
-</h2>
+<h2 onclick="toggleSection('publications-section')" style="cursor:pointer;">Selected Publications</h2>
 <hr/>
-<div id="publications-section" class="section-content">
+<div id="publications-section">
 {% include publications.html %}
 </div>
 
 <script>
-function toggleSection(id, header) {
+function toggleSection(id) {
   var section = document.getElementById(id);
-  var icon = header.querySelector('.toggle-icon');
-  section.classList.toggle('collapsed');
-  icon.classList.toggle('collapsed');
+  if (section.style.display === 'none') {
+    section.style.display = '';
+  } else {
+    section.style.display = 'none';
+  }
 }
 </script>

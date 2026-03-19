@@ -1,7 +1,6 @@
 - title: "Architectural Archipelagos: Technical Debt in Long-Lived Software Research Platforms"
   authors: "Marcelo S. Laser, Duc Minh Le, Joshua Garcia, Nenad Medvidovic"
   venue: "IEEE/ACM International Conference on Technical Debt (TechDebt 2021)"
-  type: "conference"
   preprint_link: "https://arxiv.org/pdf/2104.08432"
   bibtex: |
     @INPROCEEDINGS{9462988,  author={Laser, Marcelo Schmitt and Minh Le, Duc and Garcia, Joshua and Medvidović, Nenad},  booktitle={2021 IEEE/ACM International Conference on Technical Debt (TechDebt)},   title={Architectural Archipelagos: Technical Debt in Long-Lived Software Research Platforms},   year={2021},  volume={},  number={},  pages={94-98},  doi={10.1109/TechDebt52882.2021.00019}}
@@ -9,7 +8,6 @@
 - title: "Architectural Decay as Predictor of Issue-and Change-Proneness"
   authors: "Duc Minh Le, Surid Karthik, Marcelo S. Laser, Nenad Medvidovic"
   venue: "IEEE International Conference on Software Architecture (ICSA 2021)"
-  type: "conference"
   preprint_link: "https://arxiv.org/pdf/2102.09835"
   bibtex: |
     @INPROCEEDINGS{9426752,  author={Le, Duc Minh and Karthik, Suhrid and Laser, Marcelo Schmitt and Medvidovic, Nenad},  booktitle={2021 IEEE 18th International Conference on Software Architecture (ICSA)},   title={Architectural Decay as Predictor of Issue- and Change-Proneness},   year={2021},  volume={},  number={},  pages={92-103},  doi={10.1109/ICSA51549.2021.00017}}
@@ -17,45 +15,42 @@
 - title: "An Empirical Study of Architectural Decay in Open-Source Software Systems"
   authors: "Duc Le, D Link, A Shavazian, N Medvidovic"
   venue: "IEEE International Conference on Software Architecture (ICSA 2018)"
-  type: "conference"
   preprint_link: "http://shahbazian.me/papers/icsa2018duc.pdf"
   bibtex: |
-    @INPROCEEDINGS{8417151,
-            author={D. M. {Le} and D. {Link} and A. {Shahbazian} and N. {Medvidovic}},
-            booktitle={2018 IEEE International Conference on Software Architecture (ICSA)},
-            title={An Empirical Study of Architectural Decay in Open-Source Software},
-            year={2018},
-            volume={},
-            number={},
-            pages={176-17609},
-            keywords={public domain software;software architecture;architectural decay;principal design decisions;software system;architectural decisions;representative architectural smells;open-source software systems;architectural smell types;Computer architecture;Software architecture;Software systems;Detection algorithms;Couplings;Connectors;Architectural-Decay;Architectural-Smells;Implementation-Issues;Software-Maintenance},
-            doi={10.1109/ICSA.2018.00027},
-            ISSN={},
+    @INPROCEEDINGS{8417151, 
+            author={D. M. {Le} and D. {Link} and A. {Shahbazian} and N. {Medvidovic}}, 
+            booktitle={2018 IEEE International Conference on Software Architecture (ICSA)}, 
+            title={An Empirical Study of Architectural Decay in Open-Source Software}, 
+            year={2018}, 
+            volume={}, 
+            number={}, 
+            pages={176-17609}, 
+            keywords={public domain software;software architecture;architectural decay;principal design decisions;software system;architectural decisions;representative architectural smells;open-source software systems;architectural smell types;Computer architecture;Software architecture;Software systems;Detection algorithms;Couplings;Connectors;Architectural-Decay;Architectural-Smells;Implementation-Issues;Software-Maintenance}, 
+            doi={10.1109/ICSA.2018.00027}, 
+            ISSN={}, 
             month={April},}
 
 - title: "An Empirical Study of Architectural Change in Open-Source Software Systems (Best Paper Award)"
   authors: "DM Le, P Behnamghader, J Garcia, D Link, A Shahbazian, N Medvidovic"
   venue: "2015 IEEE/ACM 12th Working Conference on Mining Software Repositories"
-  type: "conference"
   preprint_link: "https://www.researchgate.net/profile/Arman_Shahbazian/publication/281113980_An_Empirical_Study_of_Architectural_Change_in_Open-Source_Software_Systems/links/55d6c1e208aeb38e8a840fac.pdf"
   bibtex: |
-    @INPROCEEDINGS{7180083,
-            author={D. M. {Le} and P. {Behnamghader} and J. {Garcia} and D. {Link} and A. {Shahbazian} and N. {Medvidovic}},
-            booktitle={2015 IEEE/ACM 12th Working Conference on Mining Software Repositories},
-            title={An Empirical Study of Architectural Change in Open-Source Software Systems},
-            year={2015},
-            volume={},
-            number={},
-            pages={235-245},
-            keywords={object-oriented programming;public domain software;software architecture;software maintenance;open-source software systems;software architecture;long-lived systems;architectural decay;software maintenance;software evolution;system-level architectural change;component-level architectural change;Computer architecture;Measurement;Software systems;Accuracy;Clustering algorithms;System implementation;software architecture;architectural change;software evolution;open-source systems;architecture recovery},
-            doi={10.1109/MSR.2015.29},
-            ISSN={2160-1852},
+    @INPROCEEDINGS{7180083, 
+            author={D. M. {Le} and P. {Behnamghader} and J. {Garcia} and D. {Link} and A. {Shahbazian} and N. {Medvidovic}}, 
+            booktitle={2015 IEEE/ACM 12th Working Conference on Mining Software Repositories}, 
+            title={An Empirical Study of Architectural Change in Open-Source Software Systems}, 
+            year={2015}, 
+            volume={}, 
+            number={}, 
+            pages={235-245}, 
+            keywords={object-oriented programming;public domain software;software architecture;software maintenance;open-source software systems;software architecture;long-lived systems;architectural decay;software maintenance;software evolution;system-level architectural change;component-level architectural change;Computer architecture;Measurement;Software systems;Accuracy;Clustering algorithms;System implementation;software architecture;architectural change;software evolution;open-source systems;architecture recovery}, 
+            doi={10.1109/MSR.2015.29}, 
+            ISSN={2160-1852}, 
             month={May},}
 
 - title: "Validating consistency between a feature model and its implementation"
   authors: "Duc Minh Le, Hyesun Lee, Kyo Chul Kang, Lee Keun"
   venue: "International Conference on Software Reuse"
-  type: "conference"
   preprint_link: "http://www.academia.edu/download/34167496/icsr2013_submission_24.pdf"
   bibtex: |
     @InProceedings{10.1007/978-3-642-38977-1_1,
@@ -78,18 +73,17 @@
 - title: "Relating Architectural Decay and Sustainability of Software Systems"
   authors: "Duc Minh Le, Carlos Carrillo, Rafael Capilla, Nenad Medvidovic"
   venue: "13th Working IEEE/IFIP Conference on Software Architecture (WICSA)"
-  type: "workshop"
   preprint_link: "https://www.researchgate.net/profile/Rafael_Capilla/publication/299804497_Relating_Architectural_Decay_and_Sustainability_of_Software_Systems/links/5bb7361792851c7fde2efe4b/Relating-Architectural-Decay-and-Sustainability-of-Software-Systems.pdf"
   bibtex: |
-    @INPROCEEDINGS{7516827,
-            author={D. M. {Le} and C. {Carrillo} and R. {Capilla} and N. {Medvidovic}},
-            booktitle={2016 13th Working IEEE/IFIP Conference on Software Architecture (WICSA)},
-            title={Relating Architectural Decay and Sustainability of Software Systems},
-            year={2016},
-            volume={},
-            number={},
-            pages={178-181},
-            keywords={software architecture;software maintenance;software metrics;software quality;source code (software);software system architectural decay;software system sustainability;system quality;system health;code sustainability level;architectural smells;software metrics;software maintenance;software evolution;Measurement;Computer architecture;Taxonomy;Software systems;Maintenance engineering;Computer bugs;Sustainability;software metrics;longevity;evolution;software architecture;quality attributes},
-            doi={10.1109/WICSA.2016.15},
-            ISSN={},
+    @INPROCEEDINGS{7516827, 
+            author={D. M. {Le} and C. {Carrillo} and R. {Capilla} and N. {Medvidovic}}, 
+            booktitle={2016 13th Working IEEE/IFIP Conference on Software Architecture (WICSA)}, 
+            title={Relating Architectural Decay and Sustainability of Software Systems}, 
+            year={2016}, 
+            volume={}, 
+            number={}, 
+            pages={178-181}, 
+            keywords={software architecture;software maintenance;software metrics;software quality;source code (software);software system architectural decay;software system sustainability;system quality;system health;code sustainability level;architectural smells;software metrics;software maintenance;software evolution;Measurement;Computer architecture;Taxonomy;Software systems;Maintenance engineering;Computer bugs;Sustainability;software metrics;longevity;evolution;software architecture;quality attributes}, 
+            doi={10.1109/WICSA.2016.15}, 
+            ISSN={}, 
             month={April},}

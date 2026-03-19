@@ -13,6 +13,9 @@ url: "https://lemduc.github.io"
 # RSS Feed settings
 feed:
   path: feed.xml
+analytics:
+  google:
+    tracking_id: 'UA-136797269-1'
 
 # Build settings
 timezone: America/New_York

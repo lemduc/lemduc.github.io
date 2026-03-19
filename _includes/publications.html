@@ -1,11 +1,5 @@
-<div class="pub-filters">
-    <button class="pub-filter-btn active" data-filter="all">All</button>
-    <button class="pub-filter-btn" data-filter="conference">Conference</button>
-    <button class="pub-filter-btn" data-filter="workshop">Workshop</button>
-</div>
-
 {% for pub in site.data.publications %}
-<div class="row pub-row" data-pub-type="{{ pub.type }}">
+<div class="row">
     <div class="col-pub">
         <div class="pub-html">
             <span class="pub-title">{{ pub.title }}</span><br>
@@ -32,26 +26,3 @@
             role="button">Go to Google Scholar</a>
     </div>
 </div>
-
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    var filterBtns = document.querySelectorAll('.pub-filter-btn');
-    var pubRows = document.querySelectorAll('.pub-row[data-pub-type]');
-
-    filterBtns.forEach(function(btn) {
-        btn.addEventListener('click', function() {
-            filterBtns.forEach(function(b) { b.classList.remove('active'); });
-            btn.classList.add('active');
-
-            var filter = btn.getAttribute('data-filter');
-            pubRows.forEach(function(row) {
-                if (filter === 'all' || row.getAttribute('data-pub-type') === filter) {
-                    row.classList.remove('filtered-out');
-                } else {
-                    row.classList.add('filtered-out');
-                }
-            });
-        });
-    });
-});
-</script>
