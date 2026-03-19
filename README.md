@@ -21,12 +21,20 @@ The site serves as an online academic CV and professional portfolio, featuring:
 - Toggle functionality to show/hide each section for better user experience
 - Easy to update content via modular Jekyll includes
 
-## Deployment
-The site is automatically built and deployed via GitHub Pages. To preview locally, use:
+## Requirements
 
-```
+- **Ruby 3.x** (tested with Ruby 3.4.9). Ruby 4.x is not compatible with the `github-pages` gem.
+- [Bundler](https://bundler.io/) for dependency management
+
+## Local Development
+
+```sh
+bundle install
 bundle exec jekyll serve --livereload
 ```
+
+## Deployment
+The site is automatically built and deployed via GitHub Pages.
 
 ## License
 Content is © Duc Minh Le. Source code is open for personal and academic use.
@@ -44,8 +52,8 @@ To manage Ruby versions easily, use [rbenv](https://github.com/rbenv/rbenv?tab=r
 2. **Install rbenv**: Follow the [rbenv installation instructions](https://github.com/rbenv/rbenv?tab=readme-ov-file#readme) to install rbenv and ruby-build in your WSL2 shell.
 3. **Install Ruby**: Use rbenv to install the required Ruby version:
    ```sh
-   rbenv install 3.1.2  # or the version required by this project
-   rbenv global 3.1.2
+   rbenv install 3.4.9
+   rbenv global 3.4.9
    ```
 4. **Install Bundler and Jekyll**:
    ```sh
