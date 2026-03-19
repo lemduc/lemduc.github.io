@@ -10,44 +10,41 @@
         {{ content }}
     </div>
     {% include footer.html %}
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <script>
         function toggleBibTeX(btn) {
-            $(btn).closest(".col-pub").find('.pub-bibtex').toggleClass("hidden");
-            $(btn).toggleClass("btn-default");
-            $(btn).toggleClass("btn-primary");
-            $('[data-spy="scroll"]').each(function () {
-                var $spy = $(this).scrollspy('refresh')
-            });
+            var colPub = btn.closest(".col-pub");
+            colPub.querySelector('.pub-bibtex').classList.toggle("hidden");
+            btn.classList.toggle("btn-default");
+            btn.classList.toggle("btn-primary");
         }
         function stripeRows() {
-            $.each($(".row"), function(index, element) {
-                if ($(element).children(".col-pub").length > 0) {
-                    if (index % 2 == 0) {
-                        $(element).addClass("even");
-                    } else {
-                        $(element).addClass("odd");
-                    }
+            document.querySelectorAll(".row").forEach(function(el, index) {
+                if (el.querySelector(".col-pub")) {
+                    el.classList.add(index % 2 === 0 ? "even" : "odd");
                 }
             });
         }
         function adjustCols() {
-            $.each($(".row"), function(index, element) {
-                $(element).find(".col-pub-header").addClass('col-xs-10').addClass('col-xs-offset-0');
-                $(element).find(".col-pub").addClass('col-xs-10').addClass('col-xs-offset-0');
+            document.querySelectorAll(".row").forEach(function(el) {
+                el.querySelectorAll(".col-pub-header, .col-pub").forEach(function(col) {
+                    col.classList.add('col-xs-10', 'col-xs-offset-0');
+                });
             });
         }
         function insertButtons() {
-            $('.pub-html').after('<button type="button" class="btn btn-default btn-sm" onclick="toggleBibTeX(this); return false;">BibTeX</button>');
+            document.querySelectorAll('.pub-html').forEach(function(el) {
+                var btn = document.createElement('button');
+                btn.type = 'button';
+                btn.className = 'btn btn-default btn-sm';
+                btn.textContent = 'BibTeX';
+                btn.onclick = function() { toggleBibTeX(this); return false; };
+                el.after(btn);
+            });
         }
-        function setupPubs() {
+        document.addEventListener('DOMContentLoaded', function() {
             stripeRows();
             adjustCols();
             insertButtons();
-        }
-        $(document).ready(function() {
-            setupPubs();
         });
     </script>
     <script data-goatcounter="https://lemduc.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
