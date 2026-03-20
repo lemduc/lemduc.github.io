@@ -36,4 +36,38 @@
     <link rel="stylesheet" href="/stylesheets/bootstrap-social.css">
     <link rel="stylesheet" href="/stylesheets/nak.css">
     <link rel="stylesheet" href="/stylesheets/dark-mode.css">
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Duc Minh Le",
+        "honorificSuffix": "PhD",
+        "url": "{{ site.url }}{{ site.baseurl }}",
+        "image": "{{ site.url }}{{ site.baseurl }}/images/lemduc.png",
+        "email": "{{ site.author.email }}",
+        "jobTitle": "Senior Software Engineer",
+        "worksFor": {
+            "@type": "Organization",
+            "name": "Bloomberg LP",
+            "url": "https://www.bloomberg.com"
+        },
+        "alumniOf": [
+            {
+                "@type": "CollegeOrUniversity",
+                "name": "University of Southern California",
+                "url": "https://www.usc.edu/"
+            }
+        ],
+        "sameAs": [
+            "https://github.com/lemduc",
+            "https://linkedin.com/in/lemduc",
+            "https://scholar.google.com/citations?user=NckEwNMAAAAJ",
+            "https://dblp.uni-trier.de/pers/hd/l/Le:Duc_Minh",
+            "https://twitter.com/lemduc"
+        ],
+        "knowsAbout": ["Software Architecture", "System Security", "Software Engineering", "Cloud Infrastructure"]
+    }
+    </script>
 </head>
