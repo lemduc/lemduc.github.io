@@ -1,0 +1,126 @@
+html {
+  scroll-behavior: smooth;
+}
+
+/* Accessible Toggle Button */
+.section-toggle {
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  text-align: left;
+}
+
+.section-toggle:focus-visible {
+  outline: 2px dashed #337ab7;
+  outline-offset: 4px;
+}
+
+.toggle-icon {
+  font-size: 0.6em;
+  color: #777;
+  transition: transform 0.2s;
+}
+
+/* Smooth Accordion */
+.section-content {
+  display: grid;
+  grid-template-rows: 1fr;
+  transition: grid-template-rows 0.3s ease-out, opacity 0.3s ease-out;
+  opacity: 1;
+}
+.section-content.hidden-section {
+  grid-template-rows: 0fr;
+  opacity: 0;
+}
+.section-inner {
+  overflow: hidden;
+}
+
+/* Responsive Floating Nav */
+.floating-nav {
+  position: fixed;
+  top: 100px;
+  right: 30px;
+  background: var(--bg-primary, #fff);
+  border: 1px solid var(--border-color, #ccc);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  padding: 16px 20px;
+  z-index: 1000;
+  min-width: 180px;
+}
+
+.floating-nav strong {
+  display: block;
+  font-size: 1.3em;
+  font-weight: bold;
+  margin-bottom: 12px;
+  color: var(--text-primary, #333);
+}
+
+.floating-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.floating-nav li {
+  margin-bottom: 10px;
+}
+
+.floating-nav a {
+  color: #337ab7;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.floating-nav a:hover {
+  color: #23527c;
+  text-decoration: underline;
+}
+
+.nav-shortcuts {
+  margin-top: 15px;
+  color: var(--text-primary, #333);
+}
+
+@media (max-width: 900px) {
+  .floating-nav {
+    position: sticky;
+    top: 50px; 
+    right: 0;
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 10px 15px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+    z-index: 900;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  }
+  .floating-nav strong {
+    margin-bottom: 8px;
+    font-size: 1.1em;
+  }
+  .floating-nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .floating-nav li {
+    margin-bottom: 0;
+  }
+  .nav-shortcuts {
+    display: none;
+  }
+}

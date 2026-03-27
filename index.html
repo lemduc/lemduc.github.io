@@ -1,49 +1,8 @@
 ---
 layout: default
 ---
-<style>
-.floating-nav {
-  position: fixed;
-  top: 100px;
-  right: 30px;
-  background: #fff;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  padding: 16px 20px;
-  z-index: 1000;
-  min-width: 180px;
-}
-.floating-nav strong {
-  display: block;
-  font-size: 1.3em;
-  font-weight: bold;
-  margin-bottom: 12px;
-}
-.floating-nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-.floating-nav li {
-  margin-bottom: 10px;
-}
-.floating-nav a {
-  color: #337ab7;
-  text-decoration: none;
-  font-weight: 500;
-  transition: color 0.2s;
-}
-.floating-nav a:hover {
-  color: #23527c;
-  text-decoration: underline;
-}
-@media (max-width: 900px) {
-  .floating-nav { display: none; }
-}
-</style>
 
-<div class="floating-nav">
+<nav class="floating-nav" aria-label="Page Sections Navigation">
   <strong>Navigate</strong>
   <ul>
     <li><a href="#latest-updates-section">Latest Updates</a></li>
@@ -59,69 +18,139 @@ layout: default
   <div class="nav-shortcuts">
     <small>💡 Tip: Press <kbd>Ctrl+Shift+D</kbd> to toggle dark mode</small>
   </div>
-</div>
+</nav>
 
-<h2 onclick="toggleSection('latest-updates-section')" style="cursor:pointer;">Latest Updates</h2>
-<hr/>
-<div id="latest-updates-section">
-{% include latest_updates.html %}
-</div>
+<section>
+  <h2>
+    <button aria-expanded="true" aria-controls="latest-updates-section" class="section-toggle" onclick="toggleSection(this, 'latest-updates-section')">
+      Latest Updates
+      <span class="toggle-icon" aria-hidden="true">▼</span>
+    </button>
+  </h2>
+  <hr/>
+  <div id="latest-updates-section" class="section-content">
+    <div class="section-inner">
+      {% include latest_updates.html %}
+    </div>
+  </div>
+</section>
 
-<h2 onclick="toggleSection('education-section')" style="cursor:pointer;">Education</h2>
-<hr/>
-<div id="education-section">
-{% include education.html %}
-</div>
+<section>
+  <h2>
+    <button aria-expanded="true" aria-controls="education-section" class="section-toggle" onclick="toggleSection(this, 'education-section')">
+      Education
+      <span class="toggle-icon" aria-hidden="true">▼</span>
+    </button>
+  </h2>
+  <hr/>
+  <div id="education-section" class="section-content">
+    <div class="section-inner">
+      {% include education.html %}
+    </div>
+  </div>
+</section>
 
-<h2 onclick="toggleSection('experience-section')" style="cursor:pointer;">Work Experience</h2>
-<hr/>
-<div id="experience-section">
-{% include experience.html %}
-</div>
+<section>
+  <h2>
+    <button aria-expanded="true" aria-controls="experience-section" class="section-toggle" onclick="toggleSection(this, 'experience-section')">
+      Work Experience
+      <span class="toggle-icon" aria-hidden="true">▼</span>
+    </button>
+  </h2>
+  <hr/>
+  <div id="experience-section" class="section-content">
+    <div class="section-inner">
+      {% include experience.html %}
+    </div>
+  </div>
+</section>
 
-<h2 onclick="toggleSection('research-section')" style="cursor:pointer;">Research Experience</h2>
-<hr/>
-<div id="research-section">
-{% include research.html %}
-</div>
+<section>
+  <h2>
+    <button aria-expanded="true" aria-controls="research-section" class="section-toggle" onclick="toggleSection(this, 'research-section')">
+      Research Experience
+      <span class="toggle-icon" aria-hidden="true">▼</span>
+    </button>
+  </h2>
+  <hr/>
+  <div id="research-section" class="section-content">
+    <div class="section-inner">
+      {% include research.html %}
+    </div>
+  </div>
+</section>
 
-<h2 onclick="toggleSection('presentation-section')" style="cursor:pointer;">Presentations</h2>
-<hr/>
-<div id="presentation-section">
-{% include presentation.html %}
-</div>
+<section>
+  <h2>
+    <button aria-expanded="true" aria-controls="presentation-section" class="section-toggle" onclick="toggleSection(this, 'presentation-section')">
+      Presentations
+      <span class="toggle-icon" aria-hidden="true">▼</span>
+    </button>
+  </h2>
+  <hr/>
+  <div id="presentation-section" class="section-content">
+    <div class="section-inner">
+      {% include presentation.html %}
+    </div>
+  </div>
+</section>
 
-<h2 onclick="toggleSection('awards-section')" style="cursor:pointer;">Awards</h2>
-<hr/>
-<div id="awards-section">
-{% include awards.html %}
-</div>
+<section>
+  <h2>
+    <button aria-expanded="true" aria-controls="awards-section" class="section-toggle" onclick="toggleSection(this, 'awards-section')">
+      Awards
+      <span class="toggle-icon" aria-hidden="true">▼</span>
+    </button>
+  </h2>
+  <hr/>
+  <div id="awards-section" class="section-content">
+    <div class="section-inner">
+      {% include awards.html %}
+    </div>
+  </div>
+</section>
 
-<h2 onclick="toggleSection('services-section')" style="cursor:pointer;">Services</h2>
-<hr/>
-<div id="services-section">
-{% include services.html %}
-</div>
+<section>
+  <h2>
+    <button aria-expanded="true" aria-controls="services-section" class="section-toggle" onclick="toggleSection(this, 'services-section')">
+      Services
+      <span class="toggle-icon" aria-hidden="true">▼</span>
+    </button>
+  </h2>
+  <hr/>
+  <div id="services-section" class="section-content">
+    <div class="section-inner">
+      {% include services.html %}
+    </div>
+  </div>
+</section>
 
-<h2 onclick="toggleSection('patents-section')" style="cursor:pointer;">Patents</h2>
-<hr/>
-<div id="patents-section">
-{% include patents.html %}
-</div>
+<section>
+  <h2>
+    <button aria-expanded="true" aria-controls="patents-section" class="section-toggle" onclick="toggleSection(this, 'patents-section')">
+      Patents
+      <span class="toggle-icon" aria-hidden="true">▼</span>
+    </button>
+  </h2>
+  <hr/>
+  <div id="patents-section" class="section-content">
+    <div class="section-inner">
+      {% include patents.html %}
+    </div>
+  </div>
+</section>
 
-<h2 onclick="toggleSection('publications-section')" style="cursor:pointer;">Selected Publications</h2>
-<hr/>
-<div id="publications-section">
-{% include publications.html %}
-</div>
-
-<script>
-function toggleSection(id) {
-  var section = document.getElementById(id);
-  if (section.style.display === 'none') {
-    section.style.display = '';
-  } else {
-    section.style.display = 'none';
-  }
-}
-</script>
+<section>
+  <h2>
+    <button aria-expanded="true" aria-controls="publications-section" class="section-toggle" onclick="toggleSection(this, 'publications-section')">
+      Selected Publications
+      <span class="toggle-icon" aria-hidden="true">▼</span>
+    </button>
+  </h2>
+  <hr/>
+  <div id="publications-section" class="section-content">
+    <div class="section-inner">
+      {% include publications.html %}
+    </div>
+  </div>
+</section>
