@@ -1,0 +1,25 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(bundle install:*)",
+      "Bash(bundle exec:*)",
+      "Bash(ruby --version)",
+      "Bash(which rbenv:*)",
+      "Bash(rbenv install:*)",
+      "Bash(rbenv local:*)",
+      "Bash(open http://127.0.0.1:4000/)",
+      "Bash(grep -rn \"xmlns\" /Users/dle50/Desktop/personal_workspace/lemduc.github.io/ --include=\"*.html\" 2>/dev/null | head -5)",
+      "Bash(ls -la /Users/dle50/Desktop/personal_workspace/lemduc.github.io/stylesheets/bootstrap* 2>&1)",
+      "Bash(grep -n \"lemduc\\\\\\\\.png\\\\|lemduc\\\\\\\\.jpg\" /Users/dle50/Desktop/personal_workspace/lemduc.github.io/_includes/*.html /Users/dle50/Desktop/personal_workspace/lemduc.github.io/index.html 2>/dev/null)",
+      "Bash(python3 -m py_compile /Users/dle50/Desktop/personal_workspace/lemduc.github.io/*.py 2>&1 || true)",
+      "Bash(convert images/lemduc.png -resize 32x32 images/favicon-32x32.png && convert images/lemduc.png -resize 16x16 images/favicon-16x16.png && convert images/lemduc.png -resize 180x180 images/apple-touch-icon.png)",
+      "Bash(grep -r \"TODO\\\\|FIXME\\\\|BUG\\\\|HACK\" /Users/dle50/Desktop/personal_workspace/lemduc.github.io --include=\"*.html\" --include=\"*.js\" --include=\"*.yml\" --include=\"*.css\" 2>/dev/null | head -20)",
+      "Bash(grep -n \"aria-\\\\|role=\" /Users/dle50/Desktop/personal_workspace/lemduc.github.io/_includes/*.html | head -15)",
+      "Bash(wc -l /Users/dle50/Desktop/personal_workspace/lemduc.github.io/_data/*.yml)",
+      "Bash(grep -r \"<img\" /Users/dle50/Desktop/personal_workspace/lemduc.github.io/_includes/*.html | grep -v \"alt=\")",
+      "Bash(git add:*)",
+      "Bash(ruby --version && gem --version && bundle --version 2>&1)",
+      "Bash(lsof -ti:4000 | xargs kill -9 2>/dev/null; sleep 1 && eval \"$\\(rbenv init -\\)\" && rbenv shell 3.4.9 && bundle exec jekyll serve --livereload 2>&1)"
+    ]
+  }
+}
