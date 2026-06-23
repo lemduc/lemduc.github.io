@@ -54,25 +54,23 @@ The site uses Jekyll's modular include system for content organization:
 
 **Dark Mode Implementation** (`stylesheets/dark-mode.css` + `js/dark-mode.js`):
 - Uses CSS custom properties (variables) for theming
-- Toggle button (fixed top-right) and keyboard shortcut (Ctrl+Shift+D)
+- Toggle button (fixed top-right) and keyboard shortcut (Ctrl/Cmd+Shift+D)
 - System preference detection via `prefers-color-scheme`
 - Theme persistence in localStorage
 - Applied via `data-theme` attribute on `<html>` element
 
 ### RSS Feed Architecture
 
-**Feed Generation** (`feed.xml`):
-- Aggregates content from three sources:
-  1. Blog posts from `_posts/`
-  2. Updates from `_data/updates.yml`
-  3. Publications from `_data/publications.yml`
+**Feed Generation** (`feed.xml`, a Liquid template, not a Jekyll-generated posts feed):
+- Aggregates two sources, combined and sorted by date (newest first):
+  1. Updates from `_data/updates.yml` (limit 15)
+  2. Publications from `_data/publications.yml` (limit 10)
 - Available at: `https://lemduc.github.io/feed.xml`
 - Automatically regenerated on each Jekyll build
 
-### Blog Posts
-- Stored in `_posts/` directory
-- Follow Jekyll naming convention: `YYYY-MM-DD-title.md`
-- Use frontmatter for metadata (layout, title, date, categories)
+Note: this is a CV/portfolio site with **no blog** — there is no `_posts/` directory
+and no `post` layout (the only layout is `_layouts/default.html`). Don't assume Jekyll
+post conventions apply. All content is data-driven (`_data/`) or static includes.
 
 ## Content Management
 
@@ -134,19 +132,6 @@ Edit `_data/publications.yml`:
     }
 ```
 
-### Adding Blog Posts
-Create file in `_posts/` with naming pattern `YYYY-MM-DD-title.md`:
-```markdown
----
-layout: post
-title: "Post Title"
-date: 2024-01-15 10:00:00 -0500
-categories: [blog, research]
----
-
-Post content in Markdown...
-```
-
 ## Configuration
 
 ### Site Settings (`_config.yml`)
@@ -159,7 +144,8 @@ Post content in Markdown...
 - Plugins: jekyll-sitemap
 
 ### Ruby Environment
-- Ruby version specified in `.ruby-version`
+- Requires **Ruby 3.x** (tested with 3.4.9, pinned in `.ruby-version`). Ruby 4.x is
+  **not** compatible with the `github-pages` gem — do not bump past 3.x.
 - Dependencies managed via Bundler (Gemfile)
 - Uses `github-pages` gem for GitHub Pages compatibility
 
