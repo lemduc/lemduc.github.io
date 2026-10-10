@@ -19,7 +19,18 @@ The site serves as an online academic CV and professional portfolio, featuring:
 - Modern, clean, and responsive design
 - Floating navigation menu for quick access to all sections
 - Toggle functionality to show/hide each section for better user experience
+- Dark mode with toggle button, `Ctrl/Cmd+Shift+D` shortcut, system preference detection, and localStorage persistence (see [DARK_MODE_README.md](DARK_MODE_README.md))
+- RSS feed at [`/feed.xml`](https://lemduc.github.io/feed.xml) aggregating updates and publications (see [RSS_FEED_README.md](RSS_FEED_README.md))
 - Easy to update content via modular Jekyll includes
+
+## Content Management
+
+Content is data-driven — no blog, no `_posts/`. The two sources of truth are:
+
+- `_data/updates.yml` — news, achievements, activities
+- `_data/publications.yml` — publications with metadata, PDF links, and BibTeX
+
+Edit the YAML directly, or use the helpers in `update_rss.py` (`add_update()` / `add_publication()`). Each section of the page is rendered by a matching fragment in `_includes/`.
 
 ## Requirements
 
@@ -33,6 +44,14 @@ bundle install
 bundle exec jekyll serve --livereload
 ```
 
+## Testing
+
+```sh
+rake test
+```
+
+Builds the site and runs [HTMLProofer](https://github.com/gjtorikian/html-proofer) against `_site/` (validates HTML, internal links, images, and favicons).
+
 ## Deployment
 The site is automatically built and deployed via GitHub Pages.
 
@@ -40,7 +59,7 @@ The site is automatically built and deployed via GitHub Pages.
 Content is © Duc Minh Le. Source code is open for personal and academic use.
 
 ## Hint
-For fast updates and content management, consider using [Cursor](https://www.cursor.so/) to edit and preview your site efficiently.
+For fast updates and content management, use an AI coding assistant such as [Claude Code](https://claude.com/claude-code) or [Cursor](https://cursor.com) — the repo ships a `CLAUDE.md` with project-specific guidance for AI-assisted editing.
 
 ## Windows Users: Using WSL2 and rbenv
 
