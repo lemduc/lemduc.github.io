@@ -9,6 +9,7 @@ layout: default
     <li><a href="#education-section">Education</a></li>
     <li><a href="#experience-section">Work Experience</a></li>
     <li><a href="#research-section">Research Experience</a></li>
+    <li><a href="#projects-section">Open-Source Projects</a></li>
     <li><a href="#presentation-section">Presentations</a></li>
     <li><a href="#awards-section">Awards</a></li>
     <li><a href="#services-section">Services</a></li>
@@ -76,6 +77,21 @@ layout: default
   <div id="research-section" class="section-content">
     <div class="section-inner">
       {% include research.html %}
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>
+    <button aria-expanded="true" aria-controls="projects-section" class="section-toggle" onclick="toggleSection(this, 'projects-section')">
+      Open-Source Projects
+      <span class="toggle-icon" aria-hidden="true">▼</span>
+    </button>
+  </h2>
+  <hr/>
+  <div id="projects-section" class="section-content">
+    <div class="section-inner">
+      {% include projects.html %}
     </div>
   </div>
 </section>

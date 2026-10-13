@@ -19,7 +19,7 @@
   bibtex: |
     @inproceedings{10.1145/3368089.3417941,  author={Laser, Marcelo Schmitt and Medvidović, Nenad and Le, Duc Minh and Garcia, Joshua},  booktitle={Proceedings of the 28th ACM Joint Meeting on European Software Engineering Conference and Symposium on the Foundations of Software Engineering (ESEC/FSE 2020)},  title={ARCADE: An Extensible Workbench for Architecture Recovery, Change, and Decay Evaluation},  year={2020},  pages={1546-1550},  doi={10.1145/3368089.3417941}}
 
-- title: "An Empirical Study of Architectural Decay in Open-Source Software Systems"
+- title: "An Empirical Study of Architectural Decay in Open-Source Software Systems (Best Paper Award)"
   authors: "Duc Le, D Link, A Shahbazian, N Medvidovic"
   venue: "IEEE International Conference on Software Architecture (ICSA 2018)"
   preprint_link: "http://shahbazian.me/papers/icsa2018duc.pdf"
@@ -51,7 +51,7 @@
   bibtex: |
     @inproceedings{10.1145/2889160.2889260,  author={Le, Duc Minh and Medvidović, Nenad},  booktitle={Proceedings of the 38th International Conference on Software Engineering Companion (ICSE 2016), Doctoral Symposium},  title={Architectural-Based Speculative Analysis to Predict Bugs in a Software System},  year={2016},  pages={807-810},  doi={10.1145/2889160.2889260}}
 
-- title: "An Empirical Study of Architectural Change in Open-Source Software Systems (Best Paper Award)"
+- title: "An Empirical Study of Architectural Change in Open-Source Software Systems"
   authors: "DM Le, P Behnamghader, J Garcia, D Link, A Shahbazian, N Medvidovic"
   venue: "2015 IEEE/ACM 12th Working Conference on Mining Software Repositories"
   preprint_link: "https://www.researchgate.net/profile/Arman_Shahbazian/publication/281113980_An_Empirical_Study_of_Architectural_Change_in_Open-Source_Software_Systems/links/55d6c1e208aeb38e8a840fac.pdf"
