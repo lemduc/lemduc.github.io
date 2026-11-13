@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is a Jekyll-based personal academic website for Duc Minh Le, PhD, hosted on GitHub Pages. The site serves as an online academic CV and professional portfolio with features including publications, research experience, awards, and blog posts.
+This is a Jekyll-based personal academic website for Duc Minh Le, PhD, hosted on GitHub Pages. The site serves as an online academic CV and professional portfolio with features including publications, research experience, awards, talks, and projects.
 
 ## Development Commands
 
@@ -138,8 +138,7 @@ Edit `_data/publications.yml`:
 - Site metadata (title, author, description, keywords)
 - Social links (GitHub, Twitter, email)
 - RSS feed configuration
-- Google Analytics tracking
-- Timezone: America/New_York
+- Timezone: Asia/Ho_Chi_Minh
 - Markdown processor: kramdown
 - Plugins: jekyll-sitemap
 
